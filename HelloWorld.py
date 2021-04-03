@@ -12,17 +12,6 @@ try:
     #    print(row)
     cur.close()
     
-    urls = ("/.*", "hello")
-    app = web.application(urls, globals())
-
-    class hello:
-        def GET(self):
-            return 'Hello, Enkhtur! ' + rows
-
-    if __name__ == "__main__":
-        app.run()
-
-    
 except (Exception, psycopg2.DatabaseError) as error:
     print(error)
 finally:
