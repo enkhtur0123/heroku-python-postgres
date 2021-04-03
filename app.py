@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import connecttodb
 
 app = Flask(__name__)
 
@@ -18,6 +19,7 @@ def index():
     f.write(str(count))
     f.close()
 
+    count = connecttodb.rowcount()
     # Render HTML with count variable
     return render_template("index.html", count=count)
 
