@@ -20,5 +20,5 @@ def rowcount():
     finally:
         if conn is not None:
             conn.close()
-            
-    return rows
+
+    return cur.rowcount
