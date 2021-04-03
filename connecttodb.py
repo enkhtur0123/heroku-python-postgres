@@ -25,3 +25,10 @@ def rowcount():
             conn.close()
 
     return cur.rowcount
+
+def getdatabaseurl():
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    return DATABASE_URL
+
+

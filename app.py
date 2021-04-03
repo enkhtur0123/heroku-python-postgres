@@ -20,8 +20,9 @@ def index():
     f.close()
 
     count = connecttodb.rowcount()
+    url = connecttodb.getdatabaseurl()
     # Render HTML with count variable
-    return render_template("index.html", count=count)
+    return render_template("index.html", count=count, url=url)
 
 if __name__ == "__main__":
     app.run()
